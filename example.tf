@@ -15,6 +15,10 @@ security_groups        = ["ssh_allow_gonad"]
 }
 
 
+resource "aws_eip" "ip" {
+  instance = "${aws_instance.ubuntu-test.id}"
+}
+
 resource "aws_security_group" "ssh_allow_all" {
   name               = "ssh_allow_all"
   description        = "Allow all inbound SSH traffic"
