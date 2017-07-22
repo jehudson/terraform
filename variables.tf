@@ -3,5 +3,5 @@ variable "secret_key" {}
 variable "region" {
   default = "us-east-1"
 }
-variable "cidrs" { type = "list" }
-
+variable "all_cidrs"   { type = "list" }
+variable "gonad_cidrs" { type = "list" }
